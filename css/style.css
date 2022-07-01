@@ -817,7 +817,7 @@ img {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%);
 }
 .modal {
   position: absolute;
@@ -833,7 +833,7 @@ img {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  transform: translate(-50%, -50%) scale(0.9);
+  transform: translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1),
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -907,6 +907,7 @@ svg .close-icon {
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-field input ::placeholder {
@@ -970,8 +971,8 @@ svg .close-icon {
 
 a {
   color: var(--first-btn-color);
-  outline: transparent;
 }
+
 .submit-btn {
   margin-left: auto;
   margin-right: auto;
@@ -1023,6 +1024,7 @@ a {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input:hover .icon-input {
@@ -1058,6 +1060,7 @@ a {
   border: 2px solid var(--title-color);
   border-radius: 2px;
   margin-right: 7px;
+  transition: outline 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-check-link {
   font-size: 14px;
@@ -1077,6 +1080,6 @@ a {
 }
 .checkbox:focus + .icon-check {
   background-color: transparent;
-  outline: transparent;
+  outline: var(--active-link-color);
   border-color: var(--active-link-color);
 }
